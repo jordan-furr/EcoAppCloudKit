@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		C54BEFEA244CE850006EB7FC /* HabitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BEFE9244CE850006EB7FC /* HabitController.swift */; };
+		C54BEFEE244CFAF8006EB7FC /* HabitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BEFED244CFAF8006EB7FC /* HabitError.swift */; };
 		C560BF2D244CA59600A79D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF2C244CA59600A79D8C /* AppDelegate.swift */; };
 		C560BF2F244CA59600A79D8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF2E244CA59600A79D8C /* SceneDelegate.swift */; };
 		C560BF34244CA59600A79D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C560BF32244CA59600A79D8C /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 
 /* Begin PBXFileReference section */
 		C54BEFE9244CE850006EB7FC /* HabitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitController.swift; sourceTree = "<group>"; };
+		C54BEFED244CFAF8006EB7FC /* HabitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitError.swift; sourceTree = "<group>"; };
 		C560BF29244CA59600A79D8C /* EcoAppCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoAppCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C560BF2C244CA59600A79D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C560BF2E244CA59600A79D8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +53,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C54BEFEB244CE923006EB7FC /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C54BEFE9244CE850006EB7FC /* HabitController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		C54BEFEC244CE932006EB7FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C54BEFEB244CE923006EB7FC /* Model Controller */,
+				C560BF51244CE06C00A79D8C /* View Controller */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		C560BF20244CA59600A79D8C = {
 			isa = PBXGroup;
 			children = (
@@ -73,9 +92,9 @@
 			children = (
 				C560BF4D244CAB7700A79D8C /* EcoAppCloudKit.entitlements */,
 				C560BF32244CA59600A79D8C /* Main.storyboard */,
-				C54BEFE9244CE850006EB7FC /* HabitController.swift */,
+				C54BEFED244CFAF8006EB7FC /* HabitError.swift */,
 				C560BF54244CE09000A79D8C /* Model */,
-				C560BF51244CE06C00A79D8C /* View Controller */,
+				C54BEFEC244CE932006EB7FC /* Controllers */,
 				C560BF44244CA83B00A79D8C /* Resources */,
 			);
 			path = EcoAppCloudKit;
@@ -195,6 +214,7 @@
 				C560BF46244CA8BD00A79D8C /* SetUpViewController.swift in Sources */,
 				C560BF2D244CA59600A79D8C /* AppDelegate.swift in Sources */,
 				C560BF53244CE08900A79D8C /* Habit.swift in Sources */,
+				C54BEFEE244CFAF8006EB7FC /* HabitError.swift in Sources */,
 				C54BEFEA244CE850006EB7FC /* HabitController.swift in Sources */,
 				C560BF2F244CA59600A79D8C /* SceneDelegate.swift in Sources */,
 				C560BF4A244CA94F00A79D8C /* TaskListTableViewController.swift in Sources */,

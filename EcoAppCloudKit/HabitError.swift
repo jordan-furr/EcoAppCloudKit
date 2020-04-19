@@ -1,5 +1,5 @@
 //
-//  HabitController.swift
+//  HabitError.swift
 //  EcoAppCloudKit
 //
 //  Created by Jordan Furr on 4/19/20.
@@ -7,3 +7,9 @@
 //
 
 import Foundation
+
+enum HabitError: LocalizedError {
+    case ckError(Error)
+    case couldNotUnwrap
+    case unexpectedRecords
+}
