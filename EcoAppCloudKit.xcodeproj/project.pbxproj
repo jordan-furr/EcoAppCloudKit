@@ -12,6 +12,10 @@
 		C560BF34244CA59600A79D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C560BF32244CA59600A79D8C /* Main.storyboard */; };
 		C560BF36244CA59900A79D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C560BF35244CA59900A79D8C /* Assets.xcassets */; };
 		C560BF39244CA59900A79D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C560BF37244CA59900A79D8C /* LaunchScreen.storyboard */; };
+		C560BF46244CA8BD00A79D8C /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF45244CA8BD00A79D8C /* SetUpViewController.swift */; };
+		C560BF48244CA93500A79D8C /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF47244CA93500A79D8C /* HomeTableViewController.swift */; };
+		C560BF4A244CA94F00A79D8C /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF49244CA94F00A79D8C /* TaskListTableViewController.swift */; };
+		C560BF4C244CA95D00A79D8C /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF4B244CA95D00A79D8C /* TaskViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,10 @@
 		C560BF35244CA59900A79D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C560BF38244CA59900A79D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C560BF3A244CA59900A79D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C560BF45244CA8BD00A79D8C /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
+		C560BF47244CA93500A79D8C /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		C560BF49244CA94F00A79D8C /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
+		C560BF4B244CA95D00A79D8C /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +63,10 @@
 			isa = PBXGroup;
 			children = (
 				C560BF32244CA59600A79D8C /* Main.storyboard */,
+				C560BF45244CA8BD00A79D8C /* SetUpViewController.swift */,
+				C560BF47244CA93500A79D8C /* HomeTableViewController.swift */,
+				C560BF49244CA94F00A79D8C /* TaskListTableViewController.swift */,
+				C560BF4B244CA95D00A79D8C /* TaskViewController.swift */,
 				C560BF44244CA83B00A79D8C /* Resources */,
 			);
 			path = EcoAppCloudKit;
@@ -143,8 +155,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C560BF48244CA93500A79D8C /* HomeTableViewController.swift in Sources */,
+				C560BF46244CA8BD00A79D8C /* SetUpViewController.swift in Sources */,
 				C560BF2D244CA59600A79D8C /* AppDelegate.swift in Sources */,
 				C560BF2F244CA59600A79D8C /* SceneDelegate.swift in Sources */,
+				C560BF4A244CA94F00A79D8C /* TaskListTableViewController.swift in Sources */,
+				C560BF4C244CA95D00A79D8C /* TaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +307,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V2Q4X6DAJ;
 				INFOPLIST_FILE = EcoAppCloudKit/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -309,6 +326,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V2Q4X6DAJ;
 				INFOPLIST_FILE = EcoAppCloudKit/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
