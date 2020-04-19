@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6U-oc-quh">
-                                <rect key="frame" x="100" y="687.5" width="214" height="50"/>
+                                <rect key="frame" x="116" y="687.5" width="182" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="i6U-nC-JVh"/>
                                 </constraints>
@@ -44,19 +44,18 @@
                         <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="zAa-g4-8eS" firstAttribute="centerX" secondItem="gV8-Wl-19v" secondAttribute="centerX" id="8Af-4P-ZrF"/>
+                            <constraint firstItem="B6U-oc-quh" firstAttribute="width" secondItem="eCH-7U-CDV" secondAttribute="width" multiplier="0.44" id="DHK-ng-Pfo"/>
                             <constraint firstItem="YJG-AI-FdQ" firstAttribute="centerY" secondItem="gV8-Wl-19v" secondAttribute="centerY" multiplier="0.42" constant="1" id="LiE-iN-LGJ"/>
-                            <constraint firstItem="B6U-oc-quh" firstAttribute="leading" secondItem="gV8-Wl-19v" secondAttribute="leading" constant="100" id="QSu-f4-oBl"/>
                             <constraint firstItem="B6U-oc-quh" firstAttribute="centerX" secondItem="gV8-Wl-19v" secondAttribute="centerX" id="XKW-fE-6jr"/>
                             <constraint firstItem="zAa-g4-8eS" firstAttribute="centerY" secondItem="gV8-Wl-19v" secondAttribute="centerY" multiplier="0.52" id="fHI-NH-Ayi"/>
                             <constraint firstItem="YJG-AI-FdQ" firstAttribute="centerX" secondItem="gV8-Wl-19v" secondAttribute="centerX" id="umZ-dj-ptN"/>
                             <constraint firstItem="B6U-oc-quh" firstAttribute="centerY" secondItem="gV8-Wl-19v" secondAttribute="centerY" multiplier="1.5" id="wl6-pB-B5B"/>
-                            <constraint firstItem="gV8-Wl-19v" firstAttribute="trailing" secondItem="B6U-oc-quh" secondAttribute="trailing" constant="100" id="yUS-Hu-3M2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gV8-Wl-19v"/>
                     </view>
                     <navigationItem key="navigationItem" id="wSI-EJ-HqX"/>
                     <connections>
-                        <segue destination="c7s-cA-vBF" kind="show" id="5Ef-qD-7Fa"/>
+                        <segue destination="c7s-cA-vBF" kind="show" identifier="toHomePage" id="5Ef-qD-7Fa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tsj-Rk-8XW" sceneMemberID="firstResponder"/>
@@ -134,7 +133,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="sectionIndexBackgroundColor" red="0.0079678809500000006" green="0.70452189359999995" blue="0.44040049590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="zA9-N9-foa">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newTaskCell" id="zA9-N9-foa">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zA9-N9-foa" id="NZM-8J-Llg">
@@ -154,7 +153,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Xfz-vC-Ae7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4817" y="-143"/>
+            <point key="canvasLocation" x="4887" y="-132"/>
         </scene>
         <!--Task View Controller-->
         <scene sceneID="52Z-yf-0Qe">
@@ -174,6 +173,6 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="5Ef-qD-7Fa"/>
+        <segue reference="L5p-tg-T3k"/>
     </inferredMetricsTieBreakers>
 </document>
