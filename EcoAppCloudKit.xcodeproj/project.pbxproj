@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		C560BF2D244CA59600A79D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF2C244CA59600A79D8C /* AppDelegate.swift */; };
 		C560BF2F244CA59600A79D8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF2E244CA59600A79D8C /* SceneDelegate.swift */; };
-		C560BF31244CA59600A79D8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF30244CA59600A79D8C /* ViewController.swift */; };
 		C560BF34244CA59600A79D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C560BF32244CA59600A79D8C /* Main.storyboard */; };
 		C560BF36244CA59900A79D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C560BF35244CA59900A79D8C /* Assets.xcassets */; };
 		C560BF39244CA59900A79D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C560BF37244CA59900A79D8C /* LaunchScreen.storyboard */; };
@@ -19,7 +18,6 @@
 		C560BF29244CA59600A79D8C /* EcoAppCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoAppCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C560BF2C244CA59600A79D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C560BF2E244CA59600A79D8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C560BF30244CA59600A79D8C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C560BF33244CA59600A79D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C560BF35244CA59900A79D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C560BF38244CA59900A79D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -56,15 +54,22 @@
 		C560BF2B244CA59600A79D8C /* EcoAppCloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				C560BF32244CA59600A79D8C /* Main.storyboard */,
+				C560BF44244CA83B00A79D8C /* Resources */,
+			);
+			path = EcoAppCloudKit;
+			sourceTree = "<group>";
+		};
+		C560BF44244CA83B00A79D8C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				C560BF2C244CA59600A79D8C /* AppDelegate.swift */,
 				C560BF2E244CA59600A79D8C /* SceneDelegate.swift */,
-				C560BF30244CA59600A79D8C /* ViewController.swift */,
-				C560BF32244CA59600A79D8C /* Main.storyboard */,
 				C560BF35244CA59900A79D8C /* Assets.xcassets */,
 				C560BF37244CA59900A79D8C /* LaunchScreen.storyboard */,
 				C560BF3A244CA59900A79D8C /* Info.plist */,
 			);
-			path = EcoAppCloudKit;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +143,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C560BF31244CA59600A79D8C /* ViewController.swift in Sources */,
 				C560BF2D244CA59600A79D8C /* AppDelegate.swift in Sources */,
 				C560BF2F244CA59600A79D8C /* SceneDelegate.swift in Sources */,
 			);
@@ -286,7 +290,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V2Q4X6DAJ;
-				INFOPLIST_FILE = EcoAppCloudKit/Info.plist;
+				INFOPLIST_FILE = EcoAppCloudKit/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,7 +308,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V2Q4X6DAJ;
-				INFOPLIST_FILE = EcoAppCloudKit/Info.plist;
+				INFOPLIST_FILE = EcoAppCloudKit/Resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
