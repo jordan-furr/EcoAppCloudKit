@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C54BEFEA244CE850006EB7FC /* HabitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BEFE9244CE850006EB7FC /* HabitController.swift */; };
 		C54BEFEE244CFAF8006EB7FC /* HabitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BEFED244CFAF8006EB7FC /* HabitError.swift */; };
+		C551A8C4244D337800278B10 /* HabitTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C551A8C3244D337800278B10 /* HabitTableViewCell.swift */; };
 		C560BF2D244CA59600A79D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF2C244CA59600A79D8C /* AppDelegate.swift */; };
 		C560BF2F244CA59600A79D8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF2E244CA59600A79D8C /* SceneDelegate.swift */; };
 		C560BF34244CA59600A79D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C560BF32244CA59600A79D8C /* Main.storyboard */; };
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		C54BEFE9244CE850006EB7FC /* HabitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitController.swift; sourceTree = "<group>"; };
 		C54BEFED244CFAF8006EB7FC /* HabitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitError.swift; sourceTree = "<group>"; };
+		C551A8C3244D337800278B10 /* HabitTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitTableViewCell.swift; sourceTree = "<group>"; };
 		C560BF29244CA59600A79D8C /* EcoAppCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoAppCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C560BF2C244CA59600A79D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C560BF2E244CA59600A79D8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				C560BF47244CA93500A79D8C /* HomeTableViewController.swift */,
 				C560BF49244CA94F00A79D8C /* TaskListTableViewController.swift */,
 				C560BF4B244CA95D00A79D8C /* TaskViewController.swift */,
+				C551A8C3244D337800278B10 /* HabitTableViewCell.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 			files = (
 				C560BF48244CA93500A79D8C /* HomeTableViewController.swift in Sources */,
 				C560BF46244CA8BD00A79D8C /* SetUpViewController.swift in Sources */,
+				C551A8C4244D337800278B10 /* HabitTableViewCell.swift in Sources */,
 				C560BF2D244CA59600A79D8C /* AppDelegate.swift in Sources */,
 				C560BF53244CE08900A79D8C /* Habit.swift in Sources */,
 				C54BEFEE244CFAF8006EB7FC /* HabitError.swift in Sources */,
