@@ -96,12 +96,47 @@
                         <color key="separatorColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="sectionIndexBackgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="i4b-mA-1F3">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" rowHeight="100" id="i4b-mA-1F3">
+                                <rect key="frame" x="0.0" y="28" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i4b-mA-1F3" id="UbQ-Fu-RQp">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(label)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vd6-1P-W9v">
+                                            <rect key="frame" x="13" y="38.5" width="280" height="23"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="280" id="meN-iE-Za9"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(#)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Wa-Vy-U9q">
+                                            <rect key="frame" x="329" y="37" width="24" height="26"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="22"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DdJ-n2-iKN">
+                                            <rect key="frame" x="363" y="30" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="DdJ-n2-iKN" secondAttribute="height" multiplier="1:1" id="9B3-PD-dEl"/>
+                                                <constraint firstAttribute="width" constant="40" id="yFd-XY-OXe"/>
+                                            </constraints>
+                                            <state key="normal" image="plus" catalog="system">
+                                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                            </state>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="DdJ-n2-iKN" firstAttribute="centerY" secondItem="UbQ-Fu-RQp" secondAttribute="centerY" id="Iz3-Qy-rS6"/>
+                                        <constraint firstItem="vd6-1P-W9v" firstAttribute="centerX" secondItem="UbQ-Fu-RQp" secondAttribute="centerX" multiplier="0.74" id="J8A-XL-i6S"/>
+                                        <constraint firstItem="DdJ-n2-iKN" firstAttribute="leading" secondItem="2Wa-Vy-U9q" secondAttribute="trailing" constant="10" id="KpI-KO-d0e"/>
+                                        <constraint firstItem="2Wa-Vy-U9q" firstAttribute="centerY" secondItem="UbQ-Fu-RQp" secondAttribute="centerY" id="LZJ-vc-7N1"/>
+                                        <constraint firstAttribute="trailing" secondItem="DdJ-n2-iKN" secondAttribute="trailing" constant="11" id="MWE-uY-RWi"/>
+                                        <constraint firstItem="vd6-1P-W9v" firstAttribute="centerY" secondItem="UbQ-Fu-RQp" secondAttribute="centerY" id="hKk-z0-Ljf"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -193,4 +228,7 @@
     <inferredMetricsTieBreakers>
         <segue reference="L5p-tg-T3k"/>
     </inferredMetricsTieBreakers>
+    <resources>
+        <image name="plus" catalog="system" width="128" height="113"/>
+    </resources>
 </document>
