@@ -1,24 +1,196 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qgs-ye-nci">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
+        <!--Set Up View Controller-->
+        <scene sceneID="Oru-ZC-y8Y">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <viewController id="D4d-ty-LOy" customClass="SetUpViewController" customModule="EcoAppCloudKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eCH-7U-CDV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B6U-oc-quh">
+                                <rect key="frame" x="116" y="687.5" width="182" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="i6U-nC-JVh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="30"/>
+                                <state key="normal" title="ENTER">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <segue destination="c7s-cA-vBF" kind="show" id="L5p-tg-T3k"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ECO APP" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YJG-AI-FdQ">
+                                <rect key="frame" x="102" y="172.5" width="210" height="56.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="47"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="It all adds up!!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zAa-g4-8eS">
+                                <rect key="frame" x="144" y="236.5" width="126.5" height="21"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="zAa-g4-8eS" firstAttribute="centerX" secondItem="gV8-Wl-19v" secondAttribute="centerX" id="8Af-4P-ZrF"/>
+                            <constraint firstItem="B6U-oc-quh" firstAttribute="width" secondItem="eCH-7U-CDV" secondAttribute="width" multiplier="0.44" id="DHK-ng-Pfo"/>
+                            <constraint firstItem="YJG-AI-FdQ" firstAttribute="centerY" secondItem="gV8-Wl-19v" secondAttribute="centerY" multiplier="0.42" constant="1" id="LiE-iN-LGJ"/>
+                            <constraint firstItem="B6U-oc-quh" firstAttribute="centerX" secondItem="gV8-Wl-19v" secondAttribute="centerX" id="XKW-fE-6jr"/>
+                            <constraint firstItem="zAa-g4-8eS" firstAttribute="centerY" secondItem="gV8-Wl-19v" secondAttribute="centerY" multiplier="0.52" id="fHI-NH-Ayi"/>
+                            <constraint firstItem="YJG-AI-FdQ" firstAttribute="centerX" secondItem="gV8-Wl-19v" secondAttribute="centerX" id="umZ-dj-ptN"/>
+                            <constraint firstItem="B6U-oc-quh" firstAttribute="centerY" secondItem="gV8-Wl-19v" secondAttribute="centerY" multiplier="1.5" id="wl6-pB-B5B"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gV8-Wl-19v"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wSI-EJ-HqX"/>
+                    <connections>
+                        <segue destination="c7s-cA-vBF" kind="show" identifier="toHomePage" id="5Ef-qD-7Fa"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tsj-Rk-8XW" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3192.753623188406" y="187.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iuA-Fn-Re5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qgs-ye-nci" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="kdk-lT-Rju">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="0.36385628170000001" green="0.2185911945" blue="0.14492904470000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.87409400069999998" green="1" blue="0.28349309750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" red="0.36385628170000001" green="0.2185911945" blue="0.14492904470000001" alpha="0.84705882349999995" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="D4d-ty-LOy" kind="relationship" relationship="rootViewController" id="5ey-hc-WFl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dZJ-EF-gYr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2282.608695652174" y="187.5"/>
+        </scene>
+        <!--ECO APP-->
+        <scene sceneID="egd-Fr-2kx">
+            <objects>
+                <tableViewController id="c7s-cA-vBF" customClass="HomeTableViewController" customModule="EcoAppCloudKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="W8q-YJ-gWE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="separatorColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="taskCell" id="i4b-mA-1F3">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="i4b-mA-1F3" id="UbQ-Fu-RQp">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                                <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <segue destination="Q07-Im-ymh" kind="show" id="mvz-ta-Clp"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="c7s-cA-vBF" id="fRh-by-nal"/>
+                            <outlet property="delegate" destination="c7s-cA-vBF" id="q9z-zC-Xsa"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="ECO APP" id="L0w-UX-B89">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="vuo-gF-3Dh">
+                            <connections>
+                                <segue destination="3SJ-sl-iBh" kind="show" id="HHO-R9-n17"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oBh-RP-xyR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4020" y="188"/>
+        </scene>
+        <!--Add Tasks To Home Page-->
+        <scene sceneID="bUX-4K-KRu">
+            <objects>
+                <tableViewController id="3SJ-sl-iBh" customClass="TaskListTableViewController" customModule="EcoAppCloudKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="9K3-NJ-3co">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.0079678809500000006" green="0.70452189359999995" blue="0.44040049590000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="newTaskCell" textLabel="SuU-Kt-ha5" rowHeight="48" style="IBUITableViewCellStyleDefault" id="zA9-N9-foa" customClass="NewTaskTableViewCell" customModule="EcoAppCloudKit" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="414" height="48"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zA9-N9-foa" id="NZM-8J-Llg">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="48"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="SuU-Kt-ha5">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="48"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="3SJ-sl-iBh" id="Iyp-DW-6Dn"/>
+                            <outlet property="delegate" destination="3SJ-sl-iBh" id="PAL-H4-d1w"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Add Tasks To Home Page" id="7I5-ow-exQ">
+                        <barButtonItem key="backBarButtonItem" title="Done" id="H3Q-nk-uTa"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="agn-AW-ek1">
+                            <connections>
+                                <action selector="doneTapped:" destination="3SJ-sl-iBh" id="zMa-Xm-e8a"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xfz-vC-Ae7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4929" y="-81"/>
+        </scene>
+        <!--Task View Controller-->
+        <scene sceneID="52Z-yf-0Qe">
+            <objects>
+                <viewController id="Q07-Im-ymh" customClass="TaskViewController" customModule="EcoAppCloudKit" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MIh-mU-Q02">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.0081794057039999996" green="0.61281424760000003" blue="0.37149119380000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="dIf-cZ-mKf"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="5vw-Dp-thU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zn5-zY-XKS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4930" y="619"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="L5p-tg-T3k"/>
+    </inferredMetricsTieBreakers>
 </document>

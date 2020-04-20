@@ -7,14 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C54BEFEA244CE850006EB7FC /* HabitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BEFE9244CE850006EB7FC /* HabitController.swift */; };
+		C54BEFEE244CFAF8006EB7FC /* HabitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C54BEFED244CFAF8006EB7FC /* HabitError.swift */; };
 		C560BF2D244CA59600A79D8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF2C244CA59600A79D8C /* AppDelegate.swift */; };
 		C560BF2F244CA59600A79D8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF2E244CA59600A79D8C /* SceneDelegate.swift */; };
 		C560BF34244CA59600A79D8C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C560BF32244CA59600A79D8C /* Main.storyboard */; };
 		C560BF36244CA59900A79D8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C560BF35244CA59900A79D8C /* Assets.xcassets */; };
 		C560BF39244CA59900A79D8C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C560BF37244CA59900A79D8C /* LaunchScreen.storyboard */; };
+		C560BF46244CA8BD00A79D8C /* SetUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF45244CA8BD00A79D8C /* SetUpViewController.swift */; };
+		C560BF48244CA93500A79D8C /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF47244CA93500A79D8C /* HomeTableViewController.swift */; };
+		C560BF4A244CA94F00A79D8C /* TaskListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF49244CA94F00A79D8C /* TaskListTableViewController.swift */; };
+		C560BF4C244CA95D00A79D8C /* TaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF4B244CA95D00A79D8C /* TaskViewController.swift */; };
+		C560BF50244CAB7E00A79D8C /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C560BF4F244CAB7E00A79D8C /* CloudKit.framework */; };
+		C560BF53244CE08900A79D8C /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C560BF52244CE08900A79D8C /* Habit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C54BEFE9244CE850006EB7FC /* HabitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitController.swift; sourceTree = "<group>"; };
+		C54BEFED244CFAF8006EB7FC /* HabitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitError.swift; sourceTree = "<group>"; };
 		C560BF29244CA59600A79D8C /* EcoAppCloudKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EcoAppCloudKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C560BF2C244CA59600A79D8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C560BF2E244CA59600A79D8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -22,6 +32,13 @@
 		C560BF35244CA59900A79D8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C560BF38244CA59900A79D8C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C560BF3A244CA59900A79D8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C560BF45244CA8BD00A79D8C /* SetUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetUpViewController.swift; sourceTree = "<group>"; };
+		C560BF47244CA93500A79D8C /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		C560BF49244CA94F00A79D8C /* TaskListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskListTableViewController.swift; sourceTree = "<group>"; };
+		C560BF4B244CA95D00A79D8C /* TaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskViewController.swift; sourceTree = "<group>"; };
+		C560BF4D244CAB7700A79D8C /* EcoAppCloudKit.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = EcoAppCloudKit.entitlements; sourceTree = "<group>"; };
+		C560BF4F244CAB7E00A79D8C /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		C560BF52244CE08900A79D8C /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +46,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C560BF50244CAB7E00A79D8C /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C54BEFEB244CE923006EB7FC /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C54BEFE9244CE850006EB7FC /* HabitController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		C54BEFEC244CE932006EB7FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C54BEFEB244CE923006EB7FC /* Model Controller */,
+				C560BF51244CE06C00A79D8C /* View Controller */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		C560BF20244CA59600A79D8C = {
 			isa = PBXGroup;
 			children = (
 				C560BF2B244CA59600A79D8C /* EcoAppCloudKit */,
 				C560BF2A244CA59600A79D8C /* Products */,
+				C560BF4E244CAB7E00A79D8C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,7 +90,11 @@
 		C560BF2B244CA59600A79D8C /* EcoAppCloudKit */ = {
 			isa = PBXGroup;
 			children = (
+				C560BF4D244CAB7700A79D8C /* EcoAppCloudKit.entitlements */,
 				C560BF32244CA59600A79D8C /* Main.storyboard */,
+				C54BEFED244CFAF8006EB7FC /* HabitError.swift */,
+				C560BF54244CE09000A79D8C /* Model */,
+				C54BEFEC244CE932006EB7FC /* Controllers */,
 				C560BF44244CA83B00A79D8C /* Resources */,
 			);
 			path = EcoAppCloudKit;
@@ -70,6 +110,33 @@
 				C560BF3A244CA59900A79D8C /* Info.plist */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		C560BF4E244CAB7E00A79D8C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C560BF4F244CAB7E00A79D8C /* CloudKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C560BF51244CE06C00A79D8C /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C560BF45244CA8BD00A79D8C /* SetUpViewController.swift */,
+				C560BF47244CA93500A79D8C /* HomeTableViewController.swift */,
+				C560BF49244CA94F00A79D8C /* TaskListTableViewController.swift */,
+				C560BF4B244CA95D00A79D8C /* TaskViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		C560BF54244CE09000A79D8C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C560BF52244CE08900A79D8C /* Habit.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -143,8 +210,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C560BF48244CA93500A79D8C /* HomeTableViewController.swift in Sources */,
+				C560BF46244CA8BD00A79D8C /* SetUpViewController.swift in Sources */,
 				C560BF2D244CA59600A79D8C /* AppDelegate.swift in Sources */,
+				C560BF53244CE08900A79D8C /* Habit.swift in Sources */,
+				C54BEFEE244CFAF8006EB7FC /* HabitError.swift in Sources */,
+				C54BEFEA244CE850006EB7FC /* HabitController.swift in Sources */,
 				C560BF2F244CA59600A79D8C /* SceneDelegate.swift in Sources */,
+				C560BF4A244CA94F00A79D8C /* TaskListTableViewController.swift in Sources */,
+				C560BF4C244CA95D00A79D8C /* TaskViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -288,9 +362,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EcoAppCloudKit/EcoAppCloudKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V2Q4X6DAJ;
 				INFOPLIST_FILE = EcoAppCloudKit/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -306,9 +382,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = EcoAppCloudKit/EcoAppCloudKit.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7V2Q4X6DAJ;
 				INFOPLIST_FILE = EcoAppCloudKit/Resources/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
