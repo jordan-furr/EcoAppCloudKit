@@ -21,6 +21,7 @@ class HabitController {
         Habit(title: "Washed laundry with cold water", enabled: false, counter: 0, energySaved: 0),
         Habit(title: "Finished food container", enabled: false, counter: 0, energySaved: 0)
     ]
+    var nonChosenHabits: [Habit] = []
     var chosenHabits: [Habit] = []
     
     
@@ -53,12 +54,16 @@ class HabitController {
     
     func updateSelectedHabits(){
         var selectedHabits: [Habit] = []
+        var unselectedHabits: [Habit] = []
         for habit in allHabits {
             if habit.enabled == true {
                 selectedHabits.append(habit)
+            } else {
+                unselectedHabits.append(habit)
             }
         }
         chosenHabits = selectedHabits
+        nonChosenHabits = unselectedHabits
     }
 }
 

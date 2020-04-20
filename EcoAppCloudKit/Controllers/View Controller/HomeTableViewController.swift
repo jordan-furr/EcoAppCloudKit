@@ -10,30 +10,23 @@ import UIKit
 
 class HomeTableViewController: UITableViewController {
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        HabitController.shared.updateSelectedHabits()
     }
 
     // MARK: - Table view data source
-
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 1
+        return HabitController.shared.chosenHabits.count
     }
 
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "taskCell", for: indexPath)
-
-        // Configure the cell...
-
+        
+        let habit = HabitController.shared.chosenHabits[indexPath.row]
+        cell.textLabel?.text = habit.title
         return cell
     }
     
