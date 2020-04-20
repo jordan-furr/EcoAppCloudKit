@@ -19,15 +19,15 @@ class HabitController {
         Habit(title: "Refilled WaterBottle", enabled: false, counter: 0, energySaved: 0),
         Habit(title: "Recycled", enabled: false, counter: 0, energySaved: 0),
         Habit(title: "Washed laundry with cold water", enabled: false, counter: 0, energySaved: 0),
-        Habit(title: "Finished food container", enabled: false, counter: 0, energySaved: 0)
+        Habit(title: "Finished food container", enabled: false, counter: 0, energySaved: 0),
+        Habit(title: "Picked up trash", enabled: true, counter: 0, energySaved: 0)
     ]
     var nonChosenHabits: [Habit] = []
     var chosenHabits: [Habit] = []
     
-    
-    /*
     let publicDB = CKContainer.default().publicCloudDatabase
     
+    /*
     //MARK: - CRUD
     
     //MARK: - FETCH FUNC
@@ -51,6 +51,25 @@ class HabitController {
     }
  
  */
+    
+    func updateCounter(habit: Habit, _ completion: @escaping (Result<Habit, HabitError>) -> Void) {
+        
+        let record = CKRecord(habit: habit)
+        let operation = CKModifyRecordsOperation(recordsToSave: [record], recordIDsToDelete: nil)
+        operation.savePolicy = .changedKeys
+        operation.qualityOfService = .userInitiated
+        operation.modifyRecordsCompletionBlock = { (records, _, error) in
+            if let error = error {
+                return completion(.failure(.ckError(error)))
+            }
+            
+            guard let record = records?.first,
+            let habit = Habit(ckRecord: record) else {return completion(.failure(.couldNotUnwrap))}
+            print(("Updated \(record.recordID.recordName) successfully in CloudKit"))
+            completion(.success(habit))
+        }
+        publicDB.add(operation)
+    }
     
     func updateSelectedHabits(){
         var selectedHabits: [Habit] = []

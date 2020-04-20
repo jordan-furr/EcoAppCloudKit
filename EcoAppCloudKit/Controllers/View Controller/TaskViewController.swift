@@ -9,22 +9,43 @@
 import UIKit
 
 class TaskViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+        
+    
+    var habit: Habit?
+    
+    //MARK: - IB Outlets
+    @IBOutlet weak var counterLabel: UILabel!
+    
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func forgetTapped(_ sender: Any) {
+        let alertController = UIAlertController(title: "Forget Habit?", message: "You will be able to add this habit back later", preferredStyle: .alert)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {(action : UIAlertAction!) -> Void in })
+        alertController.addAction(cancelAction)
+        
+        let defaultAction = UIAlertAction(title: "Forget", style: .default) { (error) in
+            do {
+                self.navigationController?.popViewController(animated: true)
+            }
+            catch let error as NSError {
+                print ("Error forgeting habit", error)
+            }
+        }
+        alertController.addAction(defaultAction)
+        self.present(alertController, animated: true, completion: nil)
     }
-    */
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        updateViews()
+    }
+    
+    // MARK: - Helpers
+    func updateViews(){
+        guard let habit = habit else {return}
+        self.title = habit.title
+        counterLabel.text = "Successfully completed:            x   \(habit.counter ?? 0)"
+    }
 
 }
