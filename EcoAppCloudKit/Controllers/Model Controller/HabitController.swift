@@ -15,23 +15,22 @@ class HabitController {
     static let shared = HabitController()
     
     //MARK: - Collections of all & chosen habits
-    var allHabits: [Habit] = [
-        Habit(title: "Refilled WaterBottle", enabled: false, counter: 0, energySaved: 0),
-        Habit(title: "Recycled", enabled: false, counter: 0, energySaved: 0),
-        Habit(title: "Washed laundry with cold water", enabled: false, counter: 0, energySaved: 0),
-        Habit(title: "Finished food container", enabled: false, counter: 0, energySaved: 0),
-        Habit(title: "Picked up trash", enabled: true, counter: 0, energySaved: 0)
-    ]
+    var allHabits: [Habit] = []
     var nonChosenHabits: [Habit] = []
     var chosenHabits: [Habit] = []
     
     let publicDB = CKContainer.default().publicCloudDatabase
     
-    /*
-    //MARK: - CRUD
     
-    //MARK: - FETCH FUNC
-    func fetchContacts(completion: @escaping (Result<[Habit], HabitError>) -> Void) {
+
+    func createHabit(with title: String, enabled: Bool, counter: Int, energySaved: Double, completion: @escaping (Result<Habit?, HabitError>) -> Void){
+        let newHabit = Habit(title: title, enabled: enabled, counter: counter, energySaved: energySaved)
+        self.save(habit: newHabit) { (result) in
+            print(result)
+        }
+    }
+    
+    func fetchHabits(completion: @escaping (Result<[Habit], HabitError>) -> Void) {
         
         let habitPredicate = NSPredicate(value: true)
         let query = CKQuery(recordType: HabitConstants.recordTypeKey, predicate: habitPredicate)
@@ -47,10 +46,32 @@ class HabitController {
             let habits = records.compactMap({Habit(ckRecord: $0) })
             self.allHabits = habits
             completion(.success(habits))
+            self.updateSelectedHabits()
         }
     }
- 
- */
+    
+    func save(habit: Habit, completion: @escaping (Result<Habit?, HabitError>) -> Void){
+        
+        //init ckrecord from contact object
+        let habitRecord = CKRecord(habit: habit)
+        publicDB.save(habitRecord) { (record, error) in
+            
+            if let error = error {
+                print("Error in \(#function) : \(error.localizedDescription) \n---\n \(error)")
+                completion(.failure(.ckError(error)))
+                return
+            }
+            
+            //check and unwrap ckrecord that was saved adn recreate contact object
+            guard let record = record,
+            let savedContact = Habit(ckRecord: record)
+                else { completion(.failure(.couldNotUnwrap)); return}
+            print("new contact saved")
+            self.allHabits.insert(savedContact, at: 0)
+            completion(.success(savedContact))
+        }
+    }
+    
     
     func updateCounter(habit: Habit, _ completion: @escaping (Result<Habit, HabitError>) -> Void) {
         
@@ -60,6 +81,7 @@ class HabitController {
         operation.qualityOfService = .userInitiated
         operation.modifyRecordsCompletionBlock = { (records, _, error) in
             if let error = error {
+                print(error, error.localizedDescription)
                 return completion(.failure(.ckError(error)))
             }
             
@@ -74,6 +96,7 @@ class HabitController {
     func updateSelectedHabits(){
         var selectedHabits: [Habit] = []
         var unselectedHabits: [Habit] = []
+        var all = self.allHabits
         for habit in allHabits {
             if habit.enabled == true {
                 selectedHabits.append(habit)

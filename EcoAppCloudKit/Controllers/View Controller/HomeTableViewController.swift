@@ -11,9 +11,29 @@ import UIKit
 class HomeTableViewController: UITableViewController {
 
     
+    /*create habit func
+        Habit(title: , enabled: false, counter: 0, energySaved: 0),
+        Habit(title: "Recycled", enabled: false, counter: 0, energySaved: 0),
+        Habit(title: "Washed laundry with cold water", enabled: false, counter: 0, energySaved: 0),
+        Habit(title: "Finished food container", enabled: false, counter: 0, energySaved: 0),
+        Habit(title: "Picked up trash", enabled: true, counter: 0, energySaved: 0)
+    */
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        HabitController.shared.updateSelectedHabits()
+        HabitController.shared.fetchHabits { (result) in
+            self.updateViews()
+        }
+    }
+    
+    func updateViews(){
+        DispatchQueue.main.async {
+            self.tableView.reloadData()
+        }
     }
 
     // MARK: - Table view data source
@@ -53,7 +73,8 @@ extension HomeTableViewController: HabitTableViewCellDelegate {
         guard let habit = cell.habit else {return}
         habit.counter = habit.counter! + 1
         cell.updateUI()
-        HabitController.shared.updateCounter(habit: habit) { ( result) in
+        HabitController.shared.updateCounter(habit: habit) { (result) in
+            print(result)
             print("counter update saved")
         }
     }
