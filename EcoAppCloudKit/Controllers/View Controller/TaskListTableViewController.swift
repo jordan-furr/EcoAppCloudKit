@@ -12,7 +12,6 @@ class TaskListTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        HabitController.shared.updateSelectedHabits()
         tableView.allowsMultipleSelection = true
     }
     

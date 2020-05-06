@@ -24,17 +24,12 @@ class TaskViewController: UIViewController {
         alertController.addAction(cancelAction)
         
         let defaultAction = UIAlertAction(title: "Forget", style: .default) { (error) in
-            do {
-                self.navigationController?.popViewController(animated: true)
-            }
-            catch let error as NSError {
-                print ("Error forgeting habit", error)
-            }
+            self.navigationController?.popViewController(animated: true)
+//            do {}  catch let error as NSError { print ("Error forgeting habit", error)}
         }
         alertController.addAction(defaultAction)
         self.present(alertController, animated: true, completion: nil)
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,5 +42,4 @@ class TaskViewController: UIViewController {
         self.title = habit.title
         counterLabel.text = "Successfully completed:            x   \(habit.counter ?? 0)"
     }
-
 }
