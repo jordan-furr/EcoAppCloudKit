@@ -73,10 +73,12 @@ extension HomeTableViewController: HabitTableViewCellDelegate {
         guard let habit = cell.habit else {return}
         habit.counter = habit.counter! + 1
         cell.updateUI()
+        /*
         HabitController.shared.updateCounter(habit: habit) { (result) in
             print(result)
             print("counter update saved")
         }
+ */
     }
 }
 

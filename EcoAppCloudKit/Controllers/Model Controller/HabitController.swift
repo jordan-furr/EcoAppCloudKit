@@ -67,14 +67,14 @@ class HabitController {
             let savedContact = Habit(ckRecord: record)
                 else { completion(.failure(.couldNotUnwrap)); return}
             print("new contact saved")
-            self.allHabits.insert(savedContact, at: 0)
+           // self.allHabits.insert(savedContact, at: 0)
             completion(.success(savedContact))
         }
     }
     
     
     func updateCounter(habit: Habit, _ completion: @escaping (Result<Habit, HabitError>) -> Void) {
-        
+    
         let record = CKRecord(habit: habit)
         let operation = CKModifyRecordsOperation(recordsToSave: [record], recordIDsToDelete: nil)
         operation.savePolicy = .changedKeys
@@ -90,13 +90,19 @@ class HabitController {
             print(("Updated \(record.recordID.recordName) successfully in CloudKit"))
             completion(.success(habit))
         }
+ 
         publicDB.add(operation)
+        publicDB.delete(withRecordID: record.recordID) { (_, error) in
+            if let error = error {
+                print(error)
+            }
+        }
     }
     
     func updateSelectedHabits(){
         var selectedHabits: [Habit] = []
         var unselectedHabits: [Habit] = []
-        var all = self.allHabits
+       // var all = self.allHabits
         for habit in allHabits {
             if habit.enabled == true {
                 selectedHabits.append(habit)
